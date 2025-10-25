@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Welcome to robotics development todo </h1>
+<form method = 'POST'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Creat_task</button>
+</form>
+<ul>
+  {% for x in alltasks %}
+    <li>{{ x.firstname }} - task is {{x.task}} - {{x.coment}}</li>
+    <form action="/deletetask/{{x.id}}/{{ x.firstname }}" method="post">
+      {% csrf_token %}
+      <input type="submit" value="Delete task">
+    </form>
+  {% endfor %}
+</ul>
+<p>Back to <a href="http://127.0.0.1:8000/registartion/">Registration</a></p>
+
+</body>
+</html>
