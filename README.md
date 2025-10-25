@@ -28,10 +28,12 @@ This project demonstrates the use of Django models, forms, views, and templates.
 
 1. **Clone the repository**
 bash
+
 git clone https://github.com/Carshell/Django_To-do-app
+
 cd study
 
-2. Create a virtual environment
+3. Create a virtual environment
 # Windows
 python -m venv venv
 venv\Scripts\activate.bat
